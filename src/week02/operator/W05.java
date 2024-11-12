@@ -1,4 +1,4 @@
-package week02;
+package week02.operator;
 
 // 대입연산자
 public class W05 {
