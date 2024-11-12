@@ -44,5 +44,14 @@ public class W05 {
 
         number %= 2; // number = number % 2;
         System.out.println(number); // 0
+
+        // ++, --
+//        number += 1;
+//        number = number +1;
+        number++;
+        System.out.println(number); // 1
+
+        number--;
+        System.out.println(number); // 0
     }
 }
