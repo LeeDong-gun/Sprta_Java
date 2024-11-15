@@ -1,10 +1,8 @@
 package week03.project;
 
-public class DivOp extends Op {
-    @Override
+public class Sss extends Op {
     public double op(int firstNumber, int secondNumber) {
 
-        return firstNumber / secondNumber;
-
+        return firstNumber % secondNumber;
     }
 }

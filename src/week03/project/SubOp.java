@@ -1,9 +1,8 @@
 package week03.project;
 
-public class SubOp {
-    public double subOp(int firstNumber, int secondNumber) {
-        double answer = 0;
-        answer = firstNumber - secondNumber;
-        return answer;
+public class SubOp extends Op {
+    @Override
+    public double op(int firstNumber, int secondNumber) {
+        return firstNumber - secondNumber;
     }
 }

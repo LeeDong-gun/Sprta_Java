@@ -7,7 +7,6 @@ public class Main {
         // 스캐너 인스턴스
         Scanner sc = new Scanner(System.in);
         // 계산기 인스턴스
-        Calculator calculator = new Calculator(new AddOp(), new SubOp(), new MultiOp(), new DivOp());
 
         // 데이터 입력
         System.out.println("첫 번째 숫자를 입력하세요");
@@ -20,7 +19,9 @@ public class Main {
         System.out.println("두 번째 숫자를 입력하세요");
         int secondNumber = sc.nextInt();
 
-        double answer = calculator.calculator(operator, firstNumber, secondNumber);
+        Calculator calculator = new Calculator(operator);
+
+        double answer = calculator.getopertor().op(firstNumber, secondNumber);
         System.out.println(firstNumber + " " + operator + " " + secondNumber + " = " + answer);
 
         sc.close();

@@ -1,9 +1,10 @@
 package week03.project;
 
-public class MultiOp {
-    public double multiOp(int firstNumber, int secondNumber) {
-        double answer = 0;
-        answer = firstNumber * secondNumber;
-        return answer;
+public class MultiOp extends Op {
+    @Override
+    public double op(int firstNumber, int secondNumber) {
+
+        return firstNumber * secondNumber;
+         
     }
 }
