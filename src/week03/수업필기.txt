@@ -345,3 +345,36 @@ Object
     4) int hashCode() : 자바에서 객체를 식별하는 정수값인 해시 코드를 반환함.
     5) String toString() : 해당 객체의 정보를 문자열로 반환함 & Object 클래스에서 클래스이름 @해쉬코드값 리턴함.
     ...
+
+오버라이딩
+ 부모 클래스로부터 상속받은 메서드의 내용을 재정의 하는 것을 오버라이딩이라고 합니다.
+  - 부모 클래스의 메서드를 그대로 사용 가능하지만 자식 클래스의 상황에 맞게 변경을 해야하는 경우 오버라이딩
+    을 이용합니다.
+  - 오버라이딩을 하기 위해서는 아래 조건들을 만족해야 합니다.
+    1) 선언부가 부모 클래스의 메서드와 일치해야 합니다.
+    2) 접금 제어자를 부모 클래스의 메서드 보다 좁은 범위로 변경할 수 없습니다.
+    3) 예외는 부모 클래스의 메서드 보다 많이 선언할 수 없습니다.
+
+super 와 super()
+ super
+  super는 부모 클래스의 멤버를 참조할 수 있는 키워드입니다.
+    - 객체 내부 생성자 및 메서드에서 부모 클래스의 멤버에 접근하기 위해 사용될 수 있습니다.
+    - 자식 클래스 내부에서 선언한 멤버와 부모 클래스에서 상속받은 멤버와 이름이 같을 경우 이를 구분하기 위해 사용합니다.
+    - 부모 클래스
+        // 부모 클래스 Car
+        String model; // 자동차모델
+        String color; // 자동차 색상
+        double price; // 자동차 가격
+    - 자식 클래스
+        // 자식 클래스 SportsCar
+        String model = "Ferrari"; // 자동차 모델
+        String color = "Red"; // 자동차 색상
+        double price = 300000000; // 자동차 가격
+    - 자식 클래스의 메서드
+        public void setCarInfo(String model, String color, double price) {
+            super.model = model; // model은 부모 필드에 set
+            super.color = color; // color는 부모 필드에 set
+            this.price = price; // price는 자식 필드에 set
+        }
+     1) 자식 클래스의 메서드를 호출하면 super 키워드로 접근한 부모 클래스의 model, color 필드에 매개변수의 값이 저장됩니다.
+     2) this 키워드로 접근한 자식 클래스의 price 필드에는 매개변수의 값이 저장됩니다.
