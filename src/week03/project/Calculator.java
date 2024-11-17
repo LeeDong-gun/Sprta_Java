@@ -25,7 +25,7 @@ public class Calculator {
                 return new MultiOp();
 
             case "/" :
-                return  new DivOp();
+                return new DivOp();
 
             case "%" :
                 return new Sss();
