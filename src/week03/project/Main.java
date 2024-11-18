@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+
         // 스캐너 인스턴스
         Scanner sc = new Scanner(System.in);
         // 계산기 인스턴스
@@ -21,7 +23,7 @@ public class Main {
 
         Calculator calculator = new Calculator(operator);
 
-        double answer = calculator.getopertor().op(firstNumber, secondNumber);
+        double answer = calculator.getOperator().op(firstNumber, secondNumber);
         System.out.println(firstNumber + " " + operator + " " + secondNumber + " = " + answer);
 
         sc.close();

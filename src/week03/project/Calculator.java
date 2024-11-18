@@ -4,30 +4,33 @@ public class Calculator {
 
     private Op operator;
 
-    public Op getopertor() {
+
+    public Calculator(String opp) {
+        this.operator = cc(opp);
+        //    operator = new AddOp();
+    }
+
+    public Op getOperator() {
         return operator;
     }
 
-    public Calculator(String operator) {
-        this.operator = calculator(operator);
-    }
 
-    private Op calculator(String operator) {
+    private Op cc(String opp2) {
 
-        switch (operator) {
-            case "+" :
+        switch (opp2) {
+            case "+":
                 return new AddOp();
 
-            case "-" :
+            case "-":
                 return new SubOp();
 
-            case "*" :
+            case "*":
                 return new MultiOp();
 
-            case "/" :
+            case "/":
                 return new DivOp();
 
-            case "%" :
+            case "%":
                 return new Sss();
 
             default:
