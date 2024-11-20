@@ -6,13 +6,6 @@ public class Calculator {
 
     private AbstractOperation operation;
 
-    public Calculator(AbstractOperation operation) {
-        this.operation = operation;
-    }
-
-    public Calculator() {
-    }
-
     public void setOperation(AbstractOperation operation) {
         this.operation = operation;
     }

@@ -8,8 +8,8 @@ public class Parser {
 
     private final Calculator calculator = new Calculator();
 
+    // 메서드를 이용해 커스텀 예외를 상위 메서드로 던져주기.
     public Parser parseFirstNum(String firstInput) throws BadInputException {
-        // 구현 1.
         if (!Pattern.matches(NUMBER_REG, firstInput)) {
             throw new BadInputException("정수값");
         }
